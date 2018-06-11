@@ -2,14 +2,13 @@ body {margin:0px}
 
 .container
   {
-     position:absolute;
+    display:block; 
+    position:absolute;
     top:30%;
     left:30%;
     width:30vw;
      height:40vh;
      background-color:red;
-
-
   }
 #ajax_form
   {
@@ -18,3 +17,20 @@ body {margin:0px}
     left:30%;
 
       }
+.register_mode{
+  opacity:0;
+  position:absolute;
+  top:70%;
+  left:30%;
+  width:30vw;
+  height:45vh;
+  background-color:red;
+}
+#create_data
+  {
+    position:relative;
+   top:30%;
+    left:30%;
+
+      }
+

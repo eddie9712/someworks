@@ -4,16 +4,25 @@
   <meta charset="utf-8">
   <title>一個簡單的註冊登入系統</title>
   <link rel="stylesheet" type="text/css" href="./index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="container">     <!--login-->
     <form id="ajax_form">
       輸入帳號:<input type="text" name="account"><br><br>
       輸入密碼:<input type="text" name="password"><br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button id="register">註冊</button>
-      <button id="search">登入</button>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="button" id="register">註冊</button>
+      <button type="button" id="search">登入</button>
     </form>
   </div>
-  <script src="./main.js"></script>
+  <div class="register_mode">   <!--register-->
+    <form id="create_data">
+      輸入用戶名稱:<input type="text" name="user"><br><br>
+      設立帳號:<input type="text" name="account"><br><br>
+      設立密碼:<input type="text" name="password"><br><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="button" id="create">創立帳戶</button>
+    </form>
+  </div>
+  <script src="./index.js"></script>
 </body>
 </html>
