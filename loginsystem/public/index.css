@@ -33,4 +33,10 @@ body {margin:0px}
     left:30%;
 
       }
+.sucess{
+  
+  position:absolute;
+  font-size:50px;
+  background-color:blue;
 
+} 
