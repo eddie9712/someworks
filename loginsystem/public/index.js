@@ -20,8 +20,7 @@ $(document).ready(function()
             },1000,)});
       
         }); 
-      $("#back").click(function()
-      {
+      $("#back").click(function()    {
         $('.register_mode').animate(
        {
           'opacity':'0',
@@ -39,25 +38,24 @@ $(document).ready(function()
       },1000,)})    
             
             });  //end of click function
-      }); 
-*$('#create').click(function()
+$('#create').click(function()
   {
     event.preventDefault();  
     
- $.ajax({
+    $.ajax({
             method: "get",
             url: "./ajax",
             data: {
-            user:$("#create_data input[name=user]").val(),
-            account:$("create_data input[name=account]").val(),
-            password:$("create_data input[name=password]").val()
+            user:$("#create_data input[name='user']").val(),
+            asd:$("create_data input[name='asd']").val(),
+            zxc:$("create_data input[name='zxc']").val(),
             },
             success: function(data) {
                 $("#ajax_content").text(data)
             }
-          })*/
-
-
+          })
+      });
+  });
 
 
 

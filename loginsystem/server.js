@@ -12,7 +12,24 @@ var con = mysql.createConnection({    //to connect the database
 });
 app.get('/ajax',function(req,res)  // to create the data of user
     {  
-       
+     var user=req.query.user;
+     var asd=req.query.asd;
+    
+   
+     console.log(req.query);
+ 
+ /*    con.connect(function(err) {
+  if (err) throw err;
+  de
+  console.log("Connected!");
+  var sql = "INSERT INTO eddiedata (user,account,password) VALUES ('user','account','password')";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted");
+    });
+  });*/
+
+
     
     
     
@@ -20,15 +37,6 @@ app.get('/ajax',function(req,res)  // to create the data of user
 
 
 
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Connected!");
-  var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("1 record inserted");
-  });
-});
 
 
 
