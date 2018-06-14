@@ -47,8 +47,8 @@ $('#create').click(function()
             url: "./ajax",
             data: {
             user:$("#create_data input[name='user']").val(),
-            asd:$("create_data input[name='asd']").val(),
-            zxc:$("create_data input[name='zxc']").val(),
+            asd:$("#create_data input[name='account']").val(),
+            zxc:$("#create_data input[name='password']").val(),
             },
             success: function(data) {
                 $("#ajax_content").text(data)
