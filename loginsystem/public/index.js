@@ -47,15 +47,46 @@ $('#create').click(function()
             url: "./ajax",
             data: {
             user:$("#create_data input[name='user']").val(),
-            asd:$("#create_data input[name='account']").val(),
-            zxc:$("#create_data input[name='password']").val(),
+            account:$("#create_data input[name='account']").val(),
+            password:$("#create_data input[name='password']").val(),
             },
-            success: function(data) {
-                $("#ajax_content").text(data)
-            }
-          })
+            success: 
+              function(data)
+            {
+               
+              $('.register_mode').animate({
+                 'opacity':'0',
+                 'height':'0'
+               },1000,
+                function()
+              {
+                 $('.success').animate(
+              {
+               'top':'50%',
+               'left':'50%',
+               'height':'40vh',
+                'opacity':'1'
+                },1000,)}
+                ); 
+            }  //end sucess
+          });  //end ajax
+      });   //end click function
+  $('#back').click(function()
+      {   
+         $('.success').animate({
+          'opacity':'0',
+          'height':'0'
+          },1000,
+       function()
+       {   
+          $('.container').animate({
+          'opacity':'1',
+          'height':'40vh'
+          },1000);
+       
+       });
       });
-  });
+  });    //end ready function
 
 
 
