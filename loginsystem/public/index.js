@@ -1,7 +1,7 @@
 $(document).ready(function()
   {
 
-      $('#register').click(function()
+      $('#register').click(function()    //to switch the mode
     {     
       $(".container").animate(
       {
@@ -38,13 +38,13 @@ $(document).ready(function()
       },1000,)})    
             
             });  //end of click function
-$('#create').click(function()
+$('#create').click(function()     //to create anaccount
   {
     event.preventDefault();  
     
     $.ajax({
             method: "get",
-            url: "./ajax",
+            url: "./ajax_create",
             data: {
             user:$("#create_data input[name='user']").val(),
             account:$("#create_data input[name='account']").val(),
@@ -71,7 +71,7 @@ $('#create').click(function()
             }  //end sucess
           });  //end ajax
       });   //end click function
-  $('#back').click(function()
+  $('#back').click(function()     //to finish created the account
       {   
          $('.success').animate({
           'opacity':'0',
@@ -85,6 +85,20 @@ $('#create').click(function()
           },1000);
        
        });
+      });
+  $('#login').click(function()   //to login  the account
+  {   
+    $.ajax({    
+       method:"get",
+       url:"./ajax_login",
+       data:{
+      account1:$("#ajax_form input[name='account']").val(),
+      password1:$("#ajax_form input[name='password']").val()
+       },
+    sucess:    //to status fail of success
+  {
+   }
+    });  //end ajax  
       });
   });    //end ready function
 

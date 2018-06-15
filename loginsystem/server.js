@@ -10,7 +10,7 @@ var con = mysql.createConnection({    //to connect the database
   password: "webGGdata",
   database: "uidd2018_groupG"
 });
-app.get('/ajax',function(req,res)  // to create the data of user
+app.get('/ajax_create',function(req,res)  // to create the data of user
     {  
      var user=req.query.user;
      var account=req.query.account;
@@ -24,7 +24,22 @@ app.get('/ajax',function(req,res)  // to create the data of user
      res.send();  
 
   });
-
+app.get('/ajax_login',function(req,res) //to login 
+    { 
+    var account1=req.query.account1;
+    var password1=req.query.password1;
+    var sql="SELECT * FROM eddiedata WHERE account='"+account1+"' ";
+    con.query(sql,function(err,result)
+    {   
+     if(err) throw err;   
+        
+     
+        });
+    
+    
+    
+    
+    });
 
     
     
