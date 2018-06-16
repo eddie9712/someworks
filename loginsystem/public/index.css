@@ -40,4 +40,15 @@ body {margin:0px}
   background-color:blue;
   opacity:0;
   height:0;
-} 
+}
+button{
+cursor:pointer;
+}
+#ajax_content{
+    position:absolute;
+     left:10%;
+     top:10%;
+     font-size:40px;
+     height:10%;
+     width:10vh;
+   }

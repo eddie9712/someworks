@@ -95,9 +95,12 @@ $('#create').click(function()     //to create anaccount
       account1:$("#ajax_form input[name='account']").val(),
       password1:$("#ajax_form input[name='password']").val()
        },
-    sucess:    //to status fail of success
-  {
-   }
+    success:    //to status fail of success
+    function(data)
+    {
+      console.log(data);
+      $('#ajax_content').text(data);
+    },
     });  //end ajax  
       });
   });    //end ready function
