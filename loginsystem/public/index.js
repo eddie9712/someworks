@@ -1,7 +1,7 @@
 $(document).ready(function()
   {
 
-      $('#register').click(function()
+      $('#register').click(function()    //to switch the mode
     {     
       $(".container").animate(
       {
@@ -38,24 +38,72 @@ $(document).ready(function()
       },1000,)})    
             
             });  //end of click function
-$('#create').click(function()
+$('#create').click(function()     //to create anaccount
   {
     event.preventDefault();  
     
     $.ajax({
             method: "get",
-            url: "./ajax",
+            url: "./ajax_create",
             data: {
             user:$("#create_data input[name='user']").val(),
-            asd:$("#create_data input[name='account']").val(),
-            zxc:$("#create_data input[name='password']").val(),
+            account:$("#create_data input[name='account']").val(),
+            password:$("#create_data input[name='password']").val(),
             },
-            success: function(data) {
-                $("#ajax_content").text(data)
-            }
-          })
+            success: 
+              function(data)
+            {
+               
+              $('.register_mode').animate({
+                 'opacity':'0',
+                 'height':'0'
+               },1000,
+                function()
+              {
+                 $('.success').animate(
+              {
+               'top':'50%',
+               'left':'50%',
+               'height':'40vh',
+                'opacity':'1'
+                },1000,)}
+                ); 
+            }  //end sucess
+          });  //end ajax
+      });   //end click function
+  $('#back').click(function()     //to finish created the account
+      {   
+         $('.success').animate({
+          'opacity':'0',
+          'height':'0'
+          },1000,
+       function()
+       {   
+          $('.container').animate({
+          'opacity':'1',
+          'height':'40vh'
+          },1000);
+       
+       });
       });
-  });
+  $('#login').click(function()   //to login  the account
+  {   
+    $.ajax({    
+       method:"get",
+       url:"./ajax_login",
+       data:{
+      account1:$("#ajax_form input[name='account']").val(),
+      password1:$("#ajax_form input[name='password']").val()
+       },
+    success:    //to status fail of success
+    function(data)
+    {
+      console.log(data);
+      $('#ajax_content').text(data);
+    },
+    });  //end ajax  
+      });
+  });    //end ready function
 
 
 
