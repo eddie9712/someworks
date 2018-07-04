@@ -1,3 +1,18 @@
 nav{
   background-color:#42a5f5;
 }
+
+#navbar_1 {
+    font-size: 40px;
+    margin-top: 8px;
+}
+#navbar_2{
+   margin-left: 30px;
+    font-size: 20px;
+}
+#navbar_3{
+   font-size: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+
+}
