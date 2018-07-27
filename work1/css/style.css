@@ -20,18 +20,18 @@ nav{
 {
    background-color:rgba(220,220,220);
     height:15vh;
-   width:100vw;
-   margin-left:
+   width:100vw;   
 }
-#course_name>p{margin:0}
-#course_name>h4{margin:0}
 .fixed-action-btn
 {
   top:16vh;
   right:6vw; 
 
 }
-
+.card
+{
+  background-color:#1A6CBD;
+}
 
 
 
