@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
     <body style="font-family:Microsoft JhengHei">
      <div class="navbar-fixed">
@@ -76,22 +78,41 @@
   <div class="row">
     <div class="col s10 push-s1">
       <div class="card">
-        <div class="card-content white-text" style="padding-top:1.5vh">
+        <div class="card-content white-text" style="padding-top:1.5vh; padding-bottom:10px">
           <div class="row">
             <div class="col s4"><span class="card-title" style="padding-left:9px; font-size:20px; margin-bottom:0px; height:4.5vh">9.6</span><p style="font-size:12px; padding-left:12px;">甜度</p></div>
             <div class="col s4" style="border-left:2px solid white "><span class="card-title"  style="padding-left:9px; font-size:20px;  margin-bottom:0px; height:4.5vh">9.6</span><p style="font-size:12px; padding-left:12px;">涼度</p></div>
             <div class="col s4" style="border-left:2px solid white "><span class="card-title"  style="padding-left:9px; font-size:20px; margin-bottom:0px; height:4.5vh" >9.6</span><p style="font-size:12px; padding-left:12px;">推薦</p></div>
           </div>
           <div class="row">
-            <div class="col s5 push-s3" style="background-color:white; left:30%"></div>
-          </div>
+            <form action="#" id="first" style="display:none">  <!--1-->
+              <p class="range-field white-text">
+              甜度
+           <input type="range" id="range1" min="0" max="10" />
+           </p>
+           </form>
+            <form action="#" id="second" style="display:none">  <!--2-->
+           <p class="range-field white-text">
+            涼度 
+             <input type="range" id="range2" min="0" max="10" />
+           </p>
+         </form>
+           <form action="#" id="third" style="display:none">  <!--3-->
+           <p class="range-field white-text">
+            推薦 
+             <input type="range" id="range3" min="0" max="10" />
+           </p>
+           </form>
+
+          </div>  <!--score-->
+          <div class="row" id="change">
+            <div class="col s5 push-s3" style="left:25%"><a class="waves-effect waves-light btn-small white red-text text-darken-3" style="width:30vw" id="provide">提供評分</a></div>
           </div>
         </div>
       </div>
    </div>
   </div> 
-  <script src="./index.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./js/index.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
 </html>
