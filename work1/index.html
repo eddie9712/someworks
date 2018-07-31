@@ -80,11 +80,11 @@
       <div class="card">
         <div class="card-content white-text" style="padding-top:1.5vh; padding-bottom:10px">
           <div class="row">
-            <div class="col s4"><span class="card-title" style="padding-left:9px; font-size:20px; margin-bottom:0px; height:4.5vh">9.6</span><p style="font-size:12px; padding-left:12px;">甜度</p></div>
-            <div class="col s4" style="border-left:2px solid white "><span class="card-title"  style="padding-left:9px; font-size:20px;  margin-bottom:0px; height:4.5vh">9.6</span><p style="font-size:12px; padding-left:12px;">涼度</p></div>
-            <div class="col s4" style="border-left:2px solid white "><span class="card-title"  style="padding-left:9px; font-size:20px; margin-bottom:0px; height:4.5vh" >9.6</span><p style="font-size:12px; padding-left:12px;">推薦</p></div>
+            <div class="col s4"><span class="card-title cardtitle1" style="padding-left:9px; font-size:20px; margin-bottom:0px; height:4.5vh">9.6</span><p style="font-size:12px; padding-left:12px;">甜度</p></div>
+            <div class="col s4" style="border-left:2px solid white "><span class="card-title cardtitle2"  style="padding-left:9px; font-size:20px;  margin-bottom:0px; height:4.5vh">9.6</span><p style="font-size:12px; padding-left:12px;">涼度</p></div>
+            <div class="col s4" style="border-left:2px solid white "><span class="card-title cardtitle3"  style="padding-left:9px; font-size:20px; margin-bottom:0px; height:4.5vh" >9.6</span><p style="font-size:12px; padding-left:12px;">推薦</p></div>
           </div>
-          <div class="row">
+          <div class="row" id="changeTotext">
             <form action="#" id="first" style="display:none">  <!--1-->
               <p class="range-field white-text">
               甜度
@@ -106,14 +106,28 @@
 
           </div>  <!--score-->
           <div class="row" id="change">
-            <div class="col s5 push-s3" style="left:25%"><a class="waves-effect waves-light btn-small white red-text text-darken-3" style="width:30vw" id="provide">提供評分</a></div>
+            <div class="col s5 push-s3" style="left:25%; display:none" id="finish"><a class="waves-effect waves-light btn-small white red-text text-darken-3" style="width:30vw">完成評分</a></div>
+            <div class="col s5 push-s3" style="left:25%;" id ="provide"><a class="waves-effect waves-light btn-small white red-text text-darken-3" style="width:30vw">提供評分</a></div>
           </div>
+         <div class="row next" style="display:none">
+           <div class="col s4 push-s4">下次吧</div>
+         </div>
         </div>
       </div>
    </div>
-  </div> 
-  <script src="./js/index.js"></script>
+ </div>
+  <div class="row white grey-text">
+
+      <div class="col s10 push-s1">
+        <h6 class="black-text" ><strong>修課心得</strong></h6>
+        <p style="line-height: 1.2rem">o;mgwer;wleg,l;elwfl,f;l<br>ewewlf;laefl;,efleammekfalk<br>emfkmflaemkfmafklsdmafkldmf<br>kmlekfmaklamflkewm<br>flkmwfklwmafkmekfmwelfk</p>
+        <div class="divider"></div>
+      </div>
+  </div>
+ <script src="./js/index.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 </body>
 </html>
-
+<i class="material-icons">add</i>
+more_vert
+arrow_drop_down
