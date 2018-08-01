@@ -1,6 +1,7 @@
 var value1=0;
 var value2=0;
 var value3=0;
+var agree=0;
 $(document).ready(function()
 {
    $("#provide").click(function()
@@ -36,4 +37,31 @@ $(document).ready(function()
       $('#changeTotext').hide();
       $('.next').html('');
     });
+   $('#options').click(function()
+  {
+    $('.collection').show();  
+
+  });
+   $('.back').click(function()
+  {     
+   $('.collection').css("height","0");
+   $('.collection').css("width","0");
+   $('.collection').css("left","5vw");
+  });
+   $('#up').click(function()
+  {
+     agree++;
+     $('#agree').text(agree);
+
+
+  });
+  $('#down').click(function()
+  {
+     if(agree!=0)
+    {
+      agree--; 
+      $('#agree').text(agree);
+    }     
+    
+  });  
 });  //end ready function
