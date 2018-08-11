@@ -63,5 +63,11 @@ $(document).ready(function()
       $('#agree').text(agree);
     }     
     
-  });  
+  });
+  $('#navbar_3').click(function()
+    {    
+      window.location.replace('./search.html'); 
+      
+      
+      })
 });  //end ready function
