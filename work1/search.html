@@ -10,18 +10,32 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
   <link href="css/search.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+</script>
 </head>
-  <body>
-   <nav style="background-color:white;">
+<body style="background:lightgray;">
+  <nav style="background-color:white">
     <div class="nav-wrapper">
-      <form>
+      <form style="margin:0">
         <div class="input-field">
-          <input id="search" type="search" required>
-          <i class="material-icons">chevron_left</i>
-          <i class="material-icons">close</i>
+          <input id="search" type="search" required placeholder="搜尋課程" style="margin:0"  onchange="ShowStr(this.id)">
+          <label class="label-icon" for="search"><i class="material-icons" id="back">chevron_left</i></label>
+          <i class="material-icons" id="clear">close</i>
         </div>
       </form>
     </div>
-  </nav> 
+  </nav>
+  <div class="divider"></div>
+  <div class="white grey-text ">
+    <h6 class="black-text" style="margin-top:0px; padding-left:6vw; padding-top:2vh"><strong>ABC-123 微積分(一)</strong></h6>
+    <p style="line-height: 1.2rem; margin-top:0px; padding-left:6vw;">123</p>
+    <div class="divider"></div>
+  </div>
+ <div class="white grey-text ">
+    <h6 class="black-text" style="margin-top:0px; padding-left:6vw; padding-top:2vh"><strong>ABC-123 微積分(二)</strong></h6>
+    <p style="line-height: 1.2rem; margin-top:0px; padding-left:6vw;">123</p>
+    <div class="divider"></div>
+  </div>
+ <script src="./js/search.js"></script>
   </body>
 </html>
