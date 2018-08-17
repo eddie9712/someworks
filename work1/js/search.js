@@ -7,7 +7,7 @@ $(document).ready(function()
  $('#clear').click(function()
     {   
       $('#search').val('');
-      $('#block1').hide();
+       $('#block1').hide(); 
        $('#block2').hide(); 
      });
    $('input').keypress(function(e) {
