@@ -6,6 +6,7 @@
        <!-- Compiled and minified JavaScript -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel=stylesheet type="text/css" href="./css/profile.css">
   <ul id="dropdown1" class="dropdown-content">
     <li><a href="#!">one</a></li>
@@ -15,8 +16,14 @@
  </ul>
   <nav>
     <div class="nav-wrapper" style="background-color:0fa5d1">
-      <img src="./assets/icon.png"></img>
+      <img src="./assets/icon.png" style="height:100%; width:auto"></img>
        <ul class="right hide-on-med-and-down">
+       <li><form>
+        <div class="input-field">
+          <input id="search" type="search" placeholder="搜尋">
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        </div>
+      </form></li>
        <li><a href="sass.html">Sass</a></li>
        <li><a href="badges.html">Components</a></li>
         <!-- Dropdown Trigger -->
