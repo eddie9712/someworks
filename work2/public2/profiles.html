@@ -5,10 +5,15 @@
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
        <!-- Compiled and minified JavaScript -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+       <meta http-equiv="Content-Type" charset=UTF-8"/>
+       <meta name="mobile-web-app-capable" content="yes">      
+       <title>個人頁面</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <link rel=stylesheet type="text/css" href="./css/profile.css">
-  <ul id="dropdown1" class="dropdown-content">
+   <link rel=stylesheet type="text/css" href="./css/profiles.css">
+  </head>
+ <body tyle="font-family:Microsoft JhengHei">
+   <ul id="dropdown1" class="dropdown-content">
     <li><a href="#!">one</a></li>
     <li><a href="#!">two</a></li>
     <li class="divider"></li>
@@ -17,22 +22,20 @@
   <nav>
     <div class="nav-wrapper" style="background-color:0fa5d1">
       <img src="./assets/icon.png" style="height:100%; width:auto"></img>
-       <ul class="right hide-on-med-and-down">
-       <li><form>
+       <ul class="right hide-on-med-and-down" id="searchitem">
+       <li style="position:relative !important;"><form>
         <div class="input-field">
-          <input id="search" type="search" placeholder="搜尋">
+          <input id="search" type="search" placeholder="搜尋" > 
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
         </div>
       </form></li>
-       <li><a href="sass.html">Sass</a></li>
-       <li><a href="badges.html">Components</a></li>
+       <li><a href="#">關於</a></li>
+       <li><a href="#">回報問題</a></li>
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">我的課表<i class="material-icons right">arrow_drop_down</i></a></li>
      </ul>
    </div>
-  </nav>  
-  </head>
-  <body>
+ </nav>
   </body>
   </html>
 
