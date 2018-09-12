@@ -9,6 +9,15 @@
 #searchitem{
   position:relative !important;
   left:-8vw;
-
+}
+#divider
+{
+  background-color:gray;
+  width:0.05vw;
+  height:100%;
 
 }
+
+
+
+
