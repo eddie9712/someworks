@@ -5,12 +5,22 @@
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
        <!-- Compiled and minified JavaScript -->
        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
        <meta http-equiv="Content-Type" charset=UTF-8"/>
        <meta name="mobile-web-app-capable" content="yes">      
        <title>個人頁面</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
+  <script>function mouseover(){
+     $('.th')
+
+            }         
+          function mouseout(){}
+
+
+ 
+  </script>
   </head>
  <body tyle="font-family:Microsoft JhengHei">
   <nav>
@@ -27,26 +37,17 @@
        <li><a href="#">回報問題</a></li>
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">我的課表</a></li>
-        <li style="padding-top:10px"><img src="./assets/picture.png" alt="" class="circle" style="height:50px; width:50px; "></li>
+        <li style="padding-top:10px" id="pic"><img src="./assets/picture.png" alt="" class="circle" style="height:50px; width:50px; "></li>
      </ul>
    </div>
  </nav>
     <div class="row" style="padding:5vw">
       <div class="col s8 push-s4">
         <div id="divider" class="secondary-content left"></div>
-        <div class="container">
+        <div class="container" style="width:90%">
        <h6>已提供心得(13)<h6>
-      <ul class="collection" style="width:950px; margin:0;">
-    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
-      <i class="material-icons circle" style="margin-top:-10px;">工</i>
-      <span class="title" style="font-size:20px">106下</span>
-      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-        <i class="material-icons" >delete</i>
-   </li>
-  </ul>
-   <ul class="collection" style="width:950px; margin:0;">
+      <div id="frame2">  <!--frame-->
+  <ul class="collection" style="width:950px; margin:0;" id="row11">
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
@@ -56,7 +57,17 @@
          <i class="material-icons" >delete</i>
      </li>
     </ul>
-       <ul class="collection" style="width:950px; margin:0;">
+     <ul class="collection" style="width:950px; margin:0;" id="row12">
+      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
+        <i class="material-icons circle" style="margin-top:-10px;">工</i>
+        <span class="title" style="font-size:20px">106下</span>
+        <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
+        <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
+          <i class="material-icons" style="padding-left:250px;">mode_edit</i>
+         <i class="material-icons" >delete</i>
+     </li>
+    </ul>
+       <ul class="collection" style="width:950px; margin:0;" id="row13">
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
@@ -66,10 +77,33 @@
           <i class="material-icons" >delete</i>
      </li>
     </ul>
+      <ul class="collection" style="width:950px; margin:0;" id="row14">
+    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
+      <i class="material-icons circle" style="margin-top:-10px;">工</i>
+      <span class="title" style="font-size:20px">106下</span>
+      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
+      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
+        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
+        <i class="material-icons" >delete</i>
+   </li>
+  </ul>
+   <ul class="collection" style="width:950px; margin:0;" id="row15">
+    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
+      <i class="material-icons circle" style="margin-top:-10px;">工</i>
+      <span class="title" style="font-size:20px">106下</span>
+      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
+      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
+        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
+        <i class="material-icons" >delete</i>
+   </li>
+  </ul>
+
+    </div>
      <br>
      <br>
      <h6>編輯中心得(13)<h6>
-         <ul class="collection" style="width:950px; margin:0;">
+    <div id="frame2">   <!--frame2-->
+         <ul class="collection " style="width:950px; margin:0;" id="row21">
     <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
       <i class="material-icons circle" style="margin-top:-10px;">工</i>
       <span class="title" style="font-size:20px">106下</span>
@@ -79,7 +113,7 @@
         <i class="material-icons" >delete</i>
    </li>
   </ul>
-   <ul class="collection" style="width:950px; margin:0;">
+   <ul class="collection" style="width:950px; margin:0;" id="row22">
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
@@ -89,7 +123,7 @@
          <i class="material-icons" >delete</i>
      </li>
     </ul>
-       <ul class="collection" style="width:950px; margin:0;">
+       <ul class="collection" style="width:950px; margin:0;" id="row23">
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
@@ -99,6 +133,28 @@
           <i class="material-icons" >delete</i>
      </li>
     </ul>
+    <ul class="collection" style="width:950px; margin:0;" id="row24">
+    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
+      <i class="material-icons circle" style="margin-top:-10px;">工</i>
+      <span class="title" style="font-size:20px">106下</span>
+      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
+      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
+        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
+        <i class="material-icons" >delete</i>
+   </li>
+  </ul>
+   <ul class="collection" style="width:950px; margin:0;" id="row25">
+    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
+      <i class="material-icons circle" style="margin-top:-10px;">工</i>
+      <span class="title" style="font-size:20px">106下</span>
+      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
+      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
+        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
+        <i class="material-icons" >delete</i>
+   </li>
+  </ul>
+
+      </div>
      </div>
      </div>
       <div class="col s4 pull-s8">
@@ -117,12 +173,12 @@
   </div>
     </div>
     </div>
-   <div class="col s12 m7" style="position:absolute; top:58px; right:90px; width:20vw"> 
+   <div class="col s12 m7" id="pic1" style="position:absolute; top:58px; display:none; right:90px; width:20vw"> 
      <div class="card horizontal">
        <div class="card-image" style="height:100px">
       <img src="./assets/picture.png" style="width:80px; height:80px;border-radius:50%; margin-top:40px; margin-left:10px;">
       </div>
-      <div class="card-stacked">
+      <div class="card-stacked" style="">
         <div class="card-content" style="padding-bottom:0">
         <h6 class="secondary-content left">汪宗諺</h6>
         <h6 class="grey-text">qw1562435@gmail.com<h6>
@@ -136,5 +192,6 @@
     </div>
   </div>
   </body>
+ <script type="text/javascript" src="./js/profiles.js"></script>
   </html>
 
