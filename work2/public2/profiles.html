@@ -12,14 +12,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
-  <script>function mouseover(){
-     $('.th')
-
-            }         
-          function mouseout(){}
-
-
- 
+   <script>
+     function hover(myobj){
+        $('#row11').css("background-color","red")
+         };         
+      function leave(myobj){
+    $('#myobj.id').css("background-color","white")
+      }
   </script>
   </head>
  <body tyle="font-family:Microsoft JhengHei">
@@ -47,7 +46,7 @@
         <div class="container" style="width:90%">
        <h6>已提供心得(13)<h6>
       <div id="frame2">  <!--frame-->
-  <ul class="collection" style="width:950px; margin:0;" id="row11">
+  <ul class="collection" style="width:950px; margin:0;" id="row11" onmouseover="hover(this)" onmouseout="leave(this)">
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
