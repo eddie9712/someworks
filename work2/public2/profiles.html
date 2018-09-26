@@ -14,17 +14,17 @@
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
    <script>
      function hover(myobj){
-         $('#'+myobj.id+'').css("background-color","gray")
+       $("#"+myobj.id).css("background-color","gray")
          };         
       function leave(myobj){
-     $('#'+myobj.id+'').css("background-color","white")
+    $("#"+myobj.id).css("background-color","white")
+      }
+     function big(myobj){
+      $("#"+myobj.id).css("font-size","1.50rem")
     }
-     function big(){
-    $('#link').css('font-size','1.50rem')
-   }
-    function small(){
-     $('#link').css('font-size','1.15rem')
-   }
+    function small(myobj){
+     $("#"+myobj.id).css("font-size","1.15rem")
+    }
   </script>
   </head>
  <body tyle="font-family:Microsoft JhengHei">
@@ -53,7 +53,7 @@
        <h6>已提供心得(13)<h6>
       <div id="frame2">  <!--frame-->
   <ul class="collection" style="width:950px; margin:0;">
-      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row11" onmouseover="hover(this)" onmouseout="leave(this)">
+      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px; cursor:pointer" id="row11" onmouseover="hover(this)" onmouseout="leave(this)">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
         <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
@@ -62,7 +62,7 @@
          <i class="material-icons" >delete</i>
      </li>
     </ul>
-     <ul class="collection" style="width:950px; margin:0;" >
+     <ul class="collection" style="width:950px; margin:0;">
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row12" onmouseover="hover(this)" onmouseout="leave(this)">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
@@ -102,7 +102,6 @@
         <i class="material-icons" >delete</i>
    </li>
   </ul>
-
     </div>
      <br>
      <br>
@@ -118,7 +117,7 @@
         <i class="material-icons" >delete</i>
    </li>
   </ul>
-   <ul class="collection" style="width:950px; margin:0;">
+   <ul class="collection" style="width:950px; margin:0;" >
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row17" onmouseover="hover(this)" onmouseout="leave(this)">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
@@ -129,7 +128,7 @@
      </li>
     </ul>
        <ul class="collection" style="width:950px; margin:0;">
-      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row18" onmouseover="hover(this)" onmouseout="leave(this)"> 
+      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row18" onmouseover="hover(this)" onmouseout="leave(this)">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
         <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
@@ -158,7 +157,6 @@
         <i class="material-icons" >delete</i>
    </li>
   </ul>
-
       </div>
      </div>
      </div>
@@ -174,7 +172,7 @@
   <h6 style="padding-right:100px;">qw1562435@gmail.com<h6>
       <h6>工程科學系</h6>
       <h6>三年級</h6>
-      <h6 id="link" style="margin-top:25px; color:0fa5d1; cursor:pointer" onmouseover="big()" onmouseout="small()">編輯個人資料</h6>
+      <h6 id="link" style="margin-top:25px; color:0fa5d1; cursor:pointer" onmouseover="big(this)" onmouseout="small(this)">編輯個人資料</h6>
   </div>
     </div>
     </div>
@@ -196,12 +194,10 @@
       </div>
     </div>
   </div>
-  <div class="mask" style="width:100%; height:1270px; background-color:rgba(200,200,200,0.5); position:absolute; z-index:1; top:0px; left:0px;" ></div>
-  <div class="self-information">
-  
-
-  </div>
+   <div id="mask" style="width:100%; height:1200px; background-color:rgba(100,100,100,0.5); z-index:2; position:absolute; top:0px; left:0px"></div>
+   <div id="box" style="position:absolute; z-index:3; background-color:white; top:40vh; left:40vw; width:30vw; height:50vh">
+   <div style="width:100%; height:10%; background-color:"></div> 
+    </div>
   </body>
  <script type="text/javascript" src="./js/profiles.js"></script>
   </html>
-
