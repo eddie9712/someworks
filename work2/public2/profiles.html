@@ -1,17 +1,19 @@
-<!doctype>
+ <!doctype>
    <html>
    <head>
    <!-- Compiled and minified CSS -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
        <!-- Compiled and minified JavaScript -->
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
        <meta http-equiv="Content-Type" charset=UTF-8"/>
        <meta name="mobile-web-app-capable" content="yes">      
        <title>個人頁面</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
+   <script type="text/javascript" src="./js/profiles.js"></script>
    <script>
      function hover(myobj){
         $("#"+myobj.id).css("background-color","gray")
@@ -25,6 +27,22 @@
     function small(myobj){
      $("#"+myobj.id).css("font-size","1.15rem")
     }
+ //  var frame2=new Vue({
+ //   el:"#frame2",
+ //   data:{
+ //       delet:false
+ //       
+ //  var frame1=new Vue({
+ //   el:"#frame1",
+ //   data:{
+ //       delet:false
+ //       }
+ //    })
+//    function del(){
+ //     frame1.delet=false;
+ //   frame2.delet=false;
+//     console.log(frame1.delet)
+//  }
   </script>
   </head>
  <body tyle="font-family:Microsoft JhengHei">
@@ -34,7 +52,7 @@
        <ul class="right hide-on-med-and-down" id="searchitem">
        <li style="position:relative !important;"><form>
         <div class="input-field">
-          <input id="search" type="search" placeholder="搜尋" > 
+          <input id="search" type="search" placeholder="搜尋" >
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
         </div>
       </form></li>
@@ -51,15 +69,15 @@
         <div id="divider" class="secondary-content left"></div>
         <div class="container" style="width:90%">
        <h6>已提供心得(13)<h6>
-      <div id="frame2">  <!--frame-->
-  <ul class="collection" style="width:950px; margin:0;">
+      <div id="frame1">  <!--frame-->
+  <ul class="collection oo1" style="width:950px; margin:0;" >
       <li class="collection-item avatar" style="padding-top:30px; padding-left:80px; cursor:pointer" id="row11" onmouseover="hover(this)" onmouseout="leave(this)">
         <i class="material-icons circle" style="margin-top:-10px;">工</i>
         <span class="title" style="font-size:20px">106下</span>
         <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
         <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-         <i class="material-icons" >delete</i>
+          <i class="material-icons" style="padding-left:250px; cursor:pointer">mode_edit</i>
+         <i class="material-icons o1"  style="cursor:pointer" >delete</i>
      </li>
     </ul>
      <ul class="collection" style="width:950px; margin:0;">
@@ -68,8 +86,8 @@
         <span class="title" style="font-size:20px">106下</span>
         <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
         <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-         <i class="material-icons" >delete</i>
+          <i class="material-icons" style="padding-left:250px; cursor:pointer">mode_edit</i>
+         <i class="material-icons" style="cursor:pointer">delete</i>
      </li>
     </ul>
        <ul class="collection" style="width:950px; margin:0;">
@@ -78,8 +96,8 @@
         <span class="title" style="font-size:20px">106下</span>
         <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
         <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-          <i class="material-icons" >delete</i>
+          <i class="material-icons" style="padding-left:250px; cursor:pointer ">mode_edit</i>
+          <i class="material-icons" style="cursor:pointer">delete</i>
      </li>
     </ul>
       <ul class="collection" style="width:950px; margin:0;">
@@ -88,8 +106,8 @@
       <span class="title" style="font-size:20px">106下</span>
       <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
       <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-        <i class="material-icons" >delete</i>
+        <i class="material-icons" style="padding-left:250px; cursor:pointer ">mode_edit</i>
+        <i class="material-icons"style="cursor:pointer"> delete</i>
    </li>
   </ul>
    <ul class="collection" style="width:950px; margin:0;">
@@ -98,8 +116,8 @@
       <span class="title" style="font-size:20px">106下</span>
       <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
       <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-        <i class="material-icons" >delete</i>
+        <i class="material-icons" style="padding-left:250px; cursor:pointer ">mode_edit</i>
+        <i class="material-icons" style="cursor:pointer">delete</i>
    </li>
   </ul>
     </div>
@@ -107,14 +125,14 @@
      <br>
      <h6>編輯中心得(13)<h6>
     <div id="frame2">   <!--frame2-->
-         <ul class="collection " style="width:950px; margin:0;">
+         <ul class="collection oo1" style="width:950px; margin:0;" v-if="delet" >
     <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row16" onmouseover="hover(this)" onmouseout="leave(this)">
       <i class="material-icons circle" style="margin-top:-10px;">工</i>
       <span class="title" style="font-size:20px">106下</span>
       <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
       <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-        <i class="material-icons" >delete</i>
+        <i class="material-icons" style="padding-left:250px;cursor:pointer" >mode_edit</i>
+        <i class="material-icons o1" style="cursor:pointer" >delete</i>
    </li>
   </ul>
    <ul class="collection" style="width:950px; margin:0;" >
@@ -123,8 +141,8 @@
         <span class="title" style="font-size:20px">106下</span>
         <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
         <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-         <i class="material-icons" >delete</i>
+          <i class="material-icons" style="padding-left:250px;cursor:pointer" >mode_edit</i>
+         <i class="material-icons" style="cursor:pointer" >delete</i>
      </li>
     </ul>
        <ul class="collection" style="width:950px; margin:0;">
@@ -133,8 +151,8 @@
         <span class="title" style="font-size:20px">106下</span>
         <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
         <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-          <i class="material-icons" >delete</i>
+          <i class="material-icons" style="padding-left:250px;cursor:pointer ">mode_edit</i>
+          <i class="material-icons" style="cursor:pointer" >delete</i>
      </li>
     </ul>
     <ul class="collection" style="width:950px; margin:0;">
@@ -143,8 +161,8 @@
       <span class="title" style="font-size:20px">106下</span>
       <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
       <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-        <i class="material-icons" >delete</i>
+        <i class="material-icons" style="padding-left:250px;cursor:pointer ">mode_edit</i>
+        <i class="material-icons" style="cursor:pointer"  >delete</i>
    </li>
   </ul>
    <ul class="collection" style="width:950px; margin:0;">
@@ -153,8 +171,8 @@
       <span class="title" style="font-size:20px">106下</span>
       <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
       <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;">mode_edit</i>
-        <i class="material-icons" >delete</i>
+        <i class="material-icons" style="padding-left:250px;cursor:pointer" >mode_edit</i>
+        <i class="material-icons" style="cursor:pointer" >delete</i>
    </li>
   </ul>
       </div>
@@ -166,12 +184,12 @@
      <div class="picture2"><img src="./assets/picture.png" style="width:100%; height:40vh;"></div>
   <br/>
   <br/>
-  <h4 style="margin: 1.266667rem 0 .46rem 0;" class="secondary-content left">汪宗諺</h4>
+  <h4 style="margin: 1.266667rem 0 .46rem 0;" class="secondary-content left" id="name">汪宗諺</h4>
   <br/>
   <a><i class="material-icons">grade</i></a>
-  <h6 style="padding-right:100px;">qw1562435@gmail.com<h6>
-      <h6>工程科學系</h6>
-      <h6>三年級</h6>
+  <h6 style="padding-right:100px;" id="mail">qw1562435@gmail.com<h6>
+      <h6 id="depart">工程科學系</h6>
+      <h6 id="gra">三年級</h6>
       <h6 id="link" style="margin-top:25px; color:0fa5d1; cursor:pointer" onmouseover="big(this)" onmouseout="small(this)">編輯個人資料</h6>
   </div>
     </div>
@@ -194,10 +212,45 @@
       </div>
     </div>
   </div>
-   <div id="mask" style="width:100%; height:1200px; background-color:rgba(100,100,100,0.5); z-index:2; position:absolute; top:0px; left:0px"></div>
-   <div id="box" style="position:absolute; z-index:3; background-color:white; top:40vh; left:40vw; width:30vw; height:50vh">
-   <div style="width:100%; height:10%; background-color:"></div> 
+   <div id="mask" style="width:100%; height:1200px; background-color:rgba(100,100,100,0.5); z-index:2; position:absolute; top:0px; left:0px; display:none "></div>
+   <div id="box" style="position:absolute; z-index:3; background-color:white; top:40vh; left:40vw; width:25vw; height:75vh; display:none">
+   <div style="width:100%; height:15%; background-color:0fa5d1"><h6 style="margin-top:0; color:white; padding-top:3vh; padding-left:3vw">編輯個人資料</h6></div>
+   <div class="container">
+    <div class="row" style="margin-bottom:0; ">
+    <div class="input-field col s6 push-s6" style="padding:0">
+      <input placeholder="姓名" id="first_name1" type="text" class="validate" style="" value="">
     </div>
+    <div class="col s6 pull-s6">
+      姓名
+    </div>
+  </div>
+    <div class="row" style="margin-bottom:0;">
+    <div class="input-field col s6 push-s6" style="padding:0 !important">
+      <input placeholder="信箱" id="first_name2" type="text" class="validate" value="">
+    </div>
+    <div class="col s6 pull-s6">
+      信箱
+    </div>
+  </div>
+   <div class="input-field col s12" style="width:100% !important" id="department">
+  <select class="browser-default" v-model="message" >
+    <option value="" disabled selected>系所</option>
+    <option value="a系">a系</option>
+    <option value="b系">b系</option>
+    <option value="c系">c系</option>
+  </select>
+     </div>
+     <div class="input-field col s12" style="width:100% !important" id="grade">
+  <select class="browser-default" v-model="message" >
+    <option value="" disabled selected>年級</option>
+    <option value="一年級">一年級</option>
+<option value="二年級">二年級</option>
+    <option value="三年級">三年級</option>
+  </select>
+     </div>
+    <a class="waves-effect waves-light btn-small" id="submit">送出</a>
+    <a class="waves-effect waves-light btn-small" id="back">返回</a>
+    </div>
+   </div>
   </body>
- <script type="text/javascript" src="./js/profiles.js"></script>
   </html>
