@@ -15,22 +15,93 @@ $(document).ready(function() {
            	message:' '
                 }
             });
-    var frame2=new Vue({
-    el:"#frame2",
+    var list=
+    [
+      {
+      "type": "工",
+      "semester":"106下",
+      "name": "微積分(一)1 ",
+      "teacher": "侯世章2 "
+      },
+      {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章3 "
+      },
+      {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章4 "
+       },
+        {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章5 "},
+        {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章6 "},
+     ]
+      var list2=
+    [
+      {
+      "type": "工",
+      "semester":"106下",
+      "name": "微積分(一)1 ",
+      "teacher": "侯世章32e "
+      },
+      {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章323f "
+      },
+      {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章4ef "
+       },
+        {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章5efw "},
+        {
+       "type": "工",
+       "semester":"106下",
+       "name": "微積分(一)1 ",
+       "teacher": "侯世章6 "},
+     ]
+
+   var comment=new Vue({
+    el:'#frame1',
     data:{
-        delet:true
-        }
-     })
-   var frame1=new Vue({
-    l:"#frame1",
-    data:{
-        delet:true
-        }
-     })
-    $('.o1').click(function(){
-    $('.oo1').hide();
-   })
-  $('#submit').click(function()
+        items:list
+     },
+     methods:{
+    deleteitem:function(index){   
+    list.splice(index,1);
+   }
+ 
+    }
+  })
+  var comment1=new Vue({
+  el:'#frame2',
+  data:{
+    items:list2
+  },
+   methods:{
+    deleteitem:function(index){
+   list2.splice(index,1)
+   }
+  }
+ })
+   $('#submit').click(function()
 {
    name=$('#first_name1').val();
    mail=$('#first_name2').val();
