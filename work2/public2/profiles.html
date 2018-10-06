@@ -13,6 +13,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
+   <style> .row11:hover{ background-color:gray  }</style>
    <script type="text/javascript" src="./js/profiles.js"></script>
    <script>
      function hover(myobj){
@@ -70,112 +71,31 @@
         <div class="container" style="width:90%">
        <h6>已提供心得(13)<h6>
       <div id="frame1">  <!--frame-->
-  <ul class="collection oo1" style="width:950px; margin:0;" >
-      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px; cursor:pointer" id="row11" onmouseover="hover(this)" onmouseout="leave(this)">
-        <i class="material-icons circle" style="margin-top:-10px;">工</i>
-        <span class="title" style="font-size:20px">106下</span>
-        <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-        <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
+  <ul class="collection oo1" style="width:950px; margin:0;" v-for="(list,index) in items">
+      <li class="collection-item avatar row11" style="padding-top:30px; padding-left:80px; cursor:pointer" id="row11">
+        <i class="material-icons circle" style="margin-top:-10px;">{{list.type}}</i>
+        <span class="title" style="font-size:20px">{{list.semester}}</span>
+        <span class="title" style="font-size:20px; padding-left:90px">{{list.name}}</span>
+        <span class="title" style="font-size:20px; padding-left:190px">{{list.teacher}}</span>
           <i class="material-icons" style="padding-left:250px; cursor:pointer">mode_edit</i>
-         <i class="material-icons o1"  style="cursor:pointer" >delete</i>
+         <i class="material-icons o1" style="cursor:pointer" @click="deleteitem(index)" >delete</i>
      </li>
     </ul>
-     <ul class="collection" style="width:950px; margin:0;">
-      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row12" onmouseover="hover(this)" onmouseout="leave(this)">
-        <i class="material-icons circle" style="margin-top:-10px;">工</i>
-        <span class="title" style="font-size:20px">106下</span>
-        <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-        <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px; cursor:pointer">mode_edit</i>
-         <i class="material-icons" style="cursor:pointer">delete</i>
-     </li>
-    </ul>
-       <ul class="collection" style="width:950px; margin:0;">
-      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row13" onmouseover="hover(this)" onmouseout="leave(this)">
-        <i class="material-icons circle" style="margin-top:-10px;">工</i>
-        <span class="title" style="font-size:20px">106下</span>
-        <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-        <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px; cursor:pointer ">mode_edit</i>
-          <i class="material-icons" style="cursor:pointer">delete</i>
-     </li>
-    </ul>
-      <ul class="collection" style="width:950px; margin:0;">
-    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row14" onmouseover="hover(this)" onmouseout="leave(this)">
-      <i class="material-icons circle" style="margin-top:-10px;">工</i>
-      <span class="title" style="font-size:20px">106下</span>
-      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px; cursor:pointer ">mode_edit</i>
-        <i class="material-icons"style="cursor:pointer"> delete</i>
-   </li>
-  </ul>
-   <ul class="collection" style="width:950px; margin:0;">
-    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row15" onmouseover="hover(this)" onmouseout="leave(this)">
-      <i class="material-icons circle" style="margin-top:-10px;">工</i>
-      <span class="title" style="font-size:20px">106下</span>
-      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px; cursor:pointer ">mode_edit</i>
-        <i class="material-icons" style="cursor:pointer">delete</i>
-   </li>
-  </ul>
     </div>
      <br>
      <br>
      <h6>編輯中心得(13)<h6>
     <div id="frame2">   <!--frame2-->
-         <ul class="collection oo1" style="width:950px; margin:0;" v-if="delet" >
-    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row16" onmouseover="hover(this)" onmouseout="leave(this)">
-      <i class="material-icons circle" style="margin-top:-10px;">工</i>
-      <span class="title" style="font-size:20px">106下</span>
-      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
+         <ul class="collection oo1" style="width:950px; margin:0;" v-for="(list2,index) in items" >
+    <li class="collection-item avatar row11" style="padding-top:30px; padding-left:80px">
+      <i class="material-icons circle" style="margin-top:-10px;">{{list2.type}}</i>
+      <span class="title" style="font-size:20px">{{list2.semester}}</span>
+      <span class="title" style="font-size:20px; padding-left:90px">{{list2.name}}</span>
+      <span class="title" style="font-size:20px; padding-left:190px">{{list2.teacher}}</span>
         <i class="material-icons" style="padding-left:250px;cursor:pointer" >mode_edit</i>
-        <i class="material-icons o1" style="cursor:pointer" >delete</i>
+        <i class="material-icons o1" style="cursor:pointer" @click="deleteitem(index)">delete</i>
    </li>
-  </ul>
-   <ul class="collection" style="width:950px; margin:0;" >
-      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row17" onmouseover="hover(this)" onmouseout="leave(this)">
-        <i class="material-icons circle" style="margin-top:-10px;">工</i>
-        <span class="title" style="font-size:20px">106下</span>
-        <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-        <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px;cursor:pointer" >mode_edit</i>
-         <i class="material-icons" style="cursor:pointer" >delete</i>
-     </li>
-    </ul>
-       <ul class="collection" style="width:950px; margin:0;">
-      <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row18" onmouseover="hover(this)" onmouseout="leave(this)">
-        <i class="material-icons circle" style="margin-top:-10px;">工</i>
-        <span class="title" style="font-size:20px">106下</span>
-        <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-        <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-          <i class="material-icons" style="padding-left:250px;cursor:pointer ">mode_edit</i>
-          <i class="material-icons" style="cursor:pointer" >delete</i>
-     </li>
-    </ul>
-    <ul class="collection" style="width:950px; margin:0;">
-    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row19" onmouseover="hover(this)" onmouseout="leave(this)">
-      <i class="material-icons circle" style="margin-top:-10px;">工</i>
-      <span class="title" style="font-size:20px">106下</span>
-      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;cursor:pointer ">mode_edit</i>
-        <i class="material-icons" style="cursor:pointer"  >delete</i>
-   </li>
-  </ul>
-   <ul class="collection" style="width:950px; margin:0;">
-    <li class="collection-item avatar" style="padding-top:30px; padding-left:80px" id="row20" onmouseover="hover(this)" onmouseout="leave(this)">
-      <i class="material-icons circle" style="margin-top:-10px;">工</i>
-      <span class="title" style="font-size:20px">106下</span>
-      <span class="title" style="font-size:20px; padding-left:90px">微積分(一)</span>
-      <span class="title" style="font-size:20px; padding-left:190px">侯世章</span>
-        <i class="material-icons" style="padding-left:250px;cursor:pointer" >mode_edit</i>
-        <i class="material-icons" style="cursor:pointer" >delete</i>
-   </li>
-  </ul>
-      </div>
+     </div>
      </div>
      </div>
       <div class="col s4 pull-s8">
