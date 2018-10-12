@@ -126,4 +126,20 @@ $('#link').click(function()
    $('#mask').hide();
   })
 })
+ $(document).mouseup(function(e){
+  var _con = $('#box');   
+  if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
+   $('#box').hide();
+  }
+});   
+
+
+
+
+
+
+
+
+
+
 
