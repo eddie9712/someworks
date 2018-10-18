@@ -9,7 +9,7 @@
        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
        <meta http-equiv="Content-Type" charset=UTF-8"/>
        <meta name="mobile-web-app-capable" content="yes">      
-       <title>個人頁面</title>
+       <title>ncku hub</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
@@ -31,20 +31,19 @@
   </script>
   </head>
  <body tyle="font-family:Microsoft JhengHei">
-  <nav>
-    <div class="nav-wrapper" style="background-color:0fa5d1">
-      <img src="./assets/icon.png" style="height:100%; width:auto"></img>
+   <nav>
+   <div class="nav-wrapper" style="background-color:0fa5d1">
+      <img src="./assets/hub.png" style="height:100%; width:auto"></img>
        <ul class="right hide-on-med-and-down" id="searchitem">
        <li style="position:relative !important;"><form>
         <div class="input-field">
-          <input id="search" type="search" placeholder="搜尋" >
+          <input id="search" type="search" placeholder="輸入「課程名」或「教師名」" >
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
         </div>
       </form></li>
-       <li><a href="#">關於</a></li>
-       <li><a href="#">回報問題</a></li>
+       <li><a href="#">找課程</a></li>
+       <li><a href="#">排班表</a></li>
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">我的課表</a></li>
         <li style="padding-top:10px" id="pic"><img src="./assets/picture.png" alt="" class="circle" style="height:50px; width:50px; "></li>
      </ul>
    </div>
@@ -81,8 +80,8 @@
    </li>
      </div>
      </div>
-     </div>
-      <div class="col s4 pull-s8">
+   </div> 
+<div class="col s4 pull-s8">
   <div class="container">
     <br>
      <div class="picture2"><img src="./assets/picture.png" style="width:100%; height:40vh;"></div>
@@ -148,7 +147,7 @@
   <select class="browser-default" v-model="message" >
     <option value="" disabled selected>年級</option>
     <option value="一年級">一年級</option>
-<option value="二年級">二年級</option>
+    <option value="二年級">二年級</option>
     <option value="三年級">三年級</option>
   </select>
      </div>
