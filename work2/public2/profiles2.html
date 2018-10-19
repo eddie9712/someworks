@@ -1,5 +1,5 @@
  <!doctype>
-   <html>
+   <html style="background-color:rgba(247,247,247,0.8)">
    <head>
    <!-- Compiled and minified CSS -->
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
@@ -50,7 +50,6 @@
  </nav>
     <div class="row" style="padding:5vw">
       <div class="col s8 push-s4">
-        <div id="divider" class="secondary-content left"></div>
         <div class="container" style="width:90%">
        <h6>已提供心得(13)<h6>
       <div id="frame1">  <!--frame-->
@@ -83,20 +82,38 @@
    </div> 
 <div class="col s4 pull-s8">
   <div class="container">
-    <br>
-     <div class="picture2"><img src="./assets/picture.png" style="width:100%; height:40vh;"></div>
-  <br/>
-  <br/>
-  <h4 style="margin: 1.266667rem 0 .46rem 0;" class="secondary-content left" id="name">汪宗諺</h4>
-  <br/>
-  <a><i class="material-icons">grade</i></a>
-  <h6 style="padding-right:100px;" id="mail">qw1562435@gmail.com<h6>
-      <h6 id="depart">工程科學系</h6>
-      <h6 id="gra">三年級</h6>
-      <h6 id="link" style="margin-top:25px; color:0fa5d1; cursor:pointer" onmouseover="big(this)" onmouseout="small(this)">編輯個人資料</h6>
-  </div>
+    <div class="row">
+      <div class="col s8 push-s4" style="padding-top:20px; padding-left:0px">
+        <div style="background-color:gray; width:100%; height:1px"></div>
+      </div>
+      <div class="col s4 pull-s8" style="padding-right:0px">
+        <h6>個人資料<h6>
+      </div>
     </div>
+   <div style="width:100%">
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://lorempixel.com/100/190/nature/6">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
     </div>
+   </div>
+   <ul class="collection">
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+    </ul>
+    <ul class="collection">
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+    </ul>
+  </div>  <!--end container-->
    <div class="col s12 m7" id="pic1" style="position:absolute; top:58px; display:none; right:90px; width:20vw"> 
      <div class="card horizontal">
        <div class="card-image" style="height:100px">
@@ -154,6 +171,7 @@
     <a class="waves-effect waves-light btn-small" id="submit">送出</a>
     <a class="waves-effect waves-light btn-small" id="back">返回</a>
     </div>
-   </div>
+  </div>
+    <a class="btn-floating btn-large waves-effect waves-light red" style="position:fixed; z-index:2; bottom:40px; right:40px"><i class="material-icons">add</i></a>
   </body>
   </html>
