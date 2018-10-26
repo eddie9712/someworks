@@ -18,32 +18,32 @@ $(document).ready(function() {
     var list=
     [
       {
-      "type": "工",
+      "type": "106-1",
       "semester":"106下",
-      "name": "微積分(一)1 ",
+      "name": "微積分(一) ",
       "teacher": "侯世章2 "
       },
       {
-       "type": "工",
+       "type": "106-1",
        "semester":"106下",
-       "name": "微積分(一)1 ",
+       "name": "微積分(一) ",
        "teacher": "侯世章3 "
       },
       {
-       "type": "工",
+       "type": "106-1",
        "semester":"106下",
-       "name": "微積分(一)1 ",
+       "name": "微積分(一) ",
        "teacher": "侯世章4 "
        },
         {
-       "type": "工",
+       "type": "106-1",
        "semester":"106下",
-       "name": "微積分(一)1 ",
+       "name": "微積分(一) ",
        "teacher": "侯世章5 "},
         {
-       "type": "工",
+       "type": "106-1",
        "semester":"106下",
-       "name": "微積分(一)1 ",
+       "name": "微積分(一) ",
        "teacher": "侯世章6 "},
      ]
       var list2=

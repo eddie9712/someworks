@@ -55,12 +55,13 @@
       <div id="frame1">  <!--frame-->
   <ul class="collection oo1" style="width:950px; margin:0;" v-for="(list,index) in items">
       <li class="collection-item avatar row11" style="padding-top:30px; padding-left:80px; cursor:pointer" id="row11">
-        <i class="material-icons circle" style="margin-top:-10px;">{{list.type}}</i>
-        <span class="title" style="font-size:20px">{{list.semester}}</span>
-        <span class="title" style="font-size:20px; padding-left:90px">{{list.name}}</span>
-        <span class="title" style="font-size:20px; padding-left:190px">{{list.teacher}}</span>
-          <i class="material-icons" style="padding-left:250px; cursor:pointer">mode_edit</i>
-         <i class="material-icons o1" style="cursor:pointer" @click="deleteitem(index)" >delete</i>
+        <i class=" circle" style="width:50px; height:50px;">{{list.type}}</i>
+        <div>
+        <div class="title" style="font-size:20px; padding-left:20px">{{list.name}}</div>
+        <div class="title" style="font-size:20px; padding-left:20px">{{list.teacher}}</div>
+        </div>  
+         <i class="material-icons secondary-content" style="padding-right:140px; cursor:pointer">mode_edit</i>
+         <i class="material-icons o1 secondary-content" style="cursor:pointer; padding-right:120px" @click="deleteitem(index)" >delete</i>
      </li>
     </ul>
     </div>
@@ -90,7 +91,7 @@
         <h6>個人資料<h6>
       </div>
     </div>
-   <div style="width:100%; height:50%">
+   <div style="width:100%;">
      <div class="card horizontal">
        <div style="padding:25px; padding-right:0px">
         <img src="./assets/picture.png" style="border-radius:50%; width:90px; height:90px">
@@ -106,16 +107,20 @@
     </div>
    </div>
    <ul class="collection">
-     <li class="collection-item"><i class="material-icons">account_box</i>
-       <h6 class="secondary-content">修改個人資料</h6> 
+     <li class="collection-item" style="padding-right:300px"><i class="material-icons">account_box</i>
+       <h6 class="secondary-content" style="margin-top:4px">修改個人資料</h6> 
      </li>
-     <li class="collection-item"><i class="material-icons">local_play</i>
-       <h6 class="secondary-content">開通使用權限</h6>
+     <li class="collection-item" style="padding-right:300px"><i class="material-icons">local_play</i>
+       <h6 class="secondary-content" style="margin-top:4px">開通使用權限</h6>
      </li>
     </ul>
     <ul class="collection">
-      <li class="collection-item">Alvin</li>
-      <li class="collection-item">Alvin</li>
+      <li class="collection-item" style="padding-right:330px"><i class="material-icons">input</i>
+      <h6 class="secondary-content" style="margin-top:4px">進入課表</h6>
+      </li>
+      <li class="collection-item" style="padding-right:330px"><i class="material-icons">assignment_return</i>
+      <h6 class="secondary-content" style="margin-top:4px">登出課表</h6>
+      </li>
     </ul>
   </div>  <!--end container-->
    <div class="col s12 m7" id="pic1" style="position:absolute; top:58px; display:none; right:90px; width:20vw"> 
