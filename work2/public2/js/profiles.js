@@ -21,31 +21,35 @@ $(document).ready(function() {
       "type": "106-1",
       "semester":"106下",
       "name": "微積分(一) ",
-      "teacher": "侯世章2 "
+      "teacher": "工資系 H3005-侯世章"
       },
       {
        "type": "106-1",
        "semester":"106下",
        "name": "微積分(一) ",
-       "teacher": "侯世章3 "
+      "teacher": "工資系 H3005-侯世章"
       },
       {
        "type": "106-1",
        "semester":"106下",
        "name": "微積分(一) ",
-       "teacher": "侯世章4 "
+       "teacher": "工資系 H3005-侯世章"
+
        },
         {
        "type": "106-1",
        "semester":"106下",
        "name": "微積分(一) ",
-       "teacher": "侯世章5 "},
-        {
+        "teacher": "工資系 H3005-侯世章"
+
+       },
+      {
        "type": "106-1",
        "semester":"106下",
        "name": "微積分(一) ",
-       "teacher": "侯世章6 "},
-     ]
+        "teacher": "工資系 H3005-侯世章"
+       }
+      ]
       var list2=
     [
       {
@@ -130,6 +134,7 @@ $('#link').click(function()
   var _con = $('#box');   
   if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
    $('#box').hide();
+   $('#mask').hide();
   }
 });   
 

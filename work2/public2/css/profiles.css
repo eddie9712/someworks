@@ -1,3 +1,11 @@
+.row11:hover{ background-color:rgba(250,250,250,.5)  
+      ;}
+.collection-item:hover{background-color:rgba(250,250,250,.5)
+}
+.collection-item
+{
+  cursor:pointer;
+}
 #search{
   background-color:#56bad8 !important;
 
