@@ -60,11 +60,11 @@
         <div class="title" style="font-size:20px; padding-left:20px">{{list.name}}</div>
         <div class="title" style="font-size:85%; padding-left:20px; color:gray">{{list.teacher}}</div>
         </div>
-         <i class="material-icons small secondary-content" style="padding-right:350px;">access_time</i>
-         <span class="secondary-content" style="padding-right:250px;">2018.11.02</span>
+        <i class="small secondary-content" style="padding-right:380px; padding-top:20px; "><img src="./assets/icon_completed.png"></i>
+         <span class="secondary-content" style="padding-right:290px; padding-top:15px">2018.11.02</span>
          <div style="width:2px; height:8vh; background-color:rgba(230,230,230,1); margin-right:250px" class="secondary-content"></div> 
-         <i class="material-icons secondary-content gray" style="padding-right:230px; cursor:pointer">mode_edit</i>
-         <i class="material-icons o1 secondary-content" style="cursor:pointer; padding-right:200px" @click="deleteitem(index)" >delete</i>
+         <i class="secondary-content gray" style="padding-right:230px; cursor:pointer"><img src="./assets/icon_edit.png"></i>
+         <i class="o1 secondary-content" style="cursor:pointer; padding-right:170px" @click="deleteitem(index)" ><img src="./assets/icon_delete.png"></i>
      </li>
     </ul>
     </div>
@@ -79,11 +79,11 @@
         <div class="title" style="font-size:20px; padding-left:20px">{{list2.name}}</div>
         <div class="title" style="font-size:85%; padding-left:20px; color:gray">{{list2.teacher}}</div>
         </div>
-         <i class="material-icons small secondary-content" style="padding-right:350px;">access_time</i>
+        <i class="small secondary-content" style="padding-right:350px;"><img src="./assets/icon_edit_2.png"></i>
          <span class="secondary-content" style="padding-right:250px;">2018.11.02</span>
          <div style="width:2px; height:8vh; background-color:rgba(230,230,230,1); margin-right:250px" class="secondary-content"></div> 
-         <i class="material-icons secondary-content gray" style="padding-right:230px; cursor:pointer">mode_edit</i>
-         <i class="material-icons o1 secondary-content" style="cursor:pointer; padding-right:200px" @click="deleteitem(index)" >delete</i>
+         <i class="secondary-content gray" style="padding-right:230px; cursor:pointer"><img src="./assets/icon_edit.png"></i>
+         <i class="o1 secondary-content" style="cursor:pointer; padding-right:200px" @click="deleteitem(index)" ><img src="./assets/icon_delete.png"></i>
      </li>
     </ul>
     </div>
@@ -115,18 +115,22 @@
     </div>
    </div>
    <ul class="collection">
-     <li class="collection-item" id="link" style="padding-right:300px"><i class="material-icons">account_box</i>
+     <li class="collection-item" id="link" style="padding-right:300px">
+       <img src="./assets/icon_profile.png">
        <h6 class="secondary-content" style="margin-top:4px">修改個人資料</h6> 
      </li>
-     <li class="collection-item" style="padding-right:300px"><i class="material-icons">local_play</i>
+     <li class="collection-item" style="padding-right:300px">
+       <img src="./assets/icon_auth.png">
        <h6 class="secondary-content" style="margin-top:4px">開通使用權限</h6>
      </li>
     </ul>
     <ul class="collection">
-      <li class="collection-item" style="padding-right:330px"><i class="material-icons">input</i>
+      <li class="collection-item" style="padding-right:330px">
+      <img src="./assets/icon_enter.png">
       <h6 class="secondary-content" style="margin-top:4px">進入課表</h6>
       </li>
-      <li class="collection-item" style="padding-right:330px"><i class="material-icons">assignment_return</i>
+      <li class="collection-item" style="padding-right:330px">
+      <img src="./assets/icon_logout.png">
       <h6 class="secondary-content" style="margin-top:4px">登出課表</h6>
       </li>
     </ul>
