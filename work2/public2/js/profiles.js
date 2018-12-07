@@ -3,27 +3,8 @@ var mail=""
 var department=""
 var grade=""
 var data;
+var test;
 $(document).ready(function() {
-   $.ajax({                //get the course information  
-     url:"./hi",
-     method:"GET",
-     success:function(result){
-     data=result
-    },
-   });
-   console.log(data);
-    var depatment=new Vue({
-         el:'#department',
-         data:{
-           	message:' '
-                }
-            });
-   var grade=new Vue({
-         el:'#grade',
-         data:{
-           	message:' '
-                }
-            });
     var list=
     [
       {
@@ -90,7 +71,6 @@ $(document).ready(function() {
        "name": "微積分(一)1 ",
        "teacher": "侯世章6 "},
      ]
-
    var comment=new Vue({
     el:'#frame1',
     data:{

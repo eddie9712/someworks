@@ -15,14 +15,48 @@
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
    <script type="text/javascript" src="./js/profiles.js"></script>
    <script>
-   var test;
-   function OnInput (event){
-      test=event.target.value
-    }
-  </script>
-  </head>
+      $.ajax({                //get the courses information  
+     	url:"./hi",
+     	method:"GET",
+     	success:function(result){
+     	data=result
+	},
+       });
+      function OnInput (event){
+       $('#test').html('');
+       var input,i,j
+        j=0;
+       input=event.target.value
+       var get=new RegExp(input)
+         var array = new Array(); 
+       for(i=0;i<5112;i++)
+        {
+           if(get.test(data[i]["課程名稱"])&&input!='')  //get the courses matched 
+         {
+           array[j]=data[i];
+            j++; 
+          }
+         }
+        for(i=0;i<array.length;i++)
+       {
+         $('#test').append("<li class='collection-item' ><span class='secondary-content' style='padding-right:320px'>"+array[i]["課程名稱"]+"</span></li>")   
+        }
+     }
+   </script>
+   </head>
  <body tyle="font-family:Microsoft JhengHei">
-   <nav>
+  <div> 
+   <ul id="test" class="collection" style="z-index:2; position:absolute; top:7vh; left:15.5vw; width:60vw;">
+       <li class="collection-item" >
+          <span class="secondary-content" style="padding-right:320px">{{array["課程名稱"]}</span>
+  	  <span class="secondary-content" style="padding-right:240px">2018</span>
+          <span class="secondary-content" style="padding-right:160px">2018</span>
+  	  <span class="secondary-content" style="padding-right:120px">2018</span> 
+          <span class="secondary-content" style="padding-right:80px">2018</span>
+     </li>
+    </ul>
+   </div>
+    <nav>
    <div class="nav-wrapper" style="background-color:0fa5d1">
       <img src="./assets/hub.png" style="height:100%; width:auto"></img>
        <ul class="right hide-on-med-and-down" id="searchitem">
@@ -30,7 +64,7 @@
         <div class="input-field">
           <input id="search" type="search" placeholder="輸入「課程名」或「教師名」"  oninput="OnInput (event)"/>
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-        </div>
+       </div>
       </form></li>
        <li><a href="#">找課程</a></li>
        <li><a href="#">排班表</a></li>
