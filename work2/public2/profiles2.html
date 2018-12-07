@@ -15,17 +15,9 @@
    <link rel=stylesheet type="text/css" href="./css/profiles.css">
    <script type="text/javascript" src="./js/profiles.js"></script>
    <script>
-     function hover(myobj){
-        $("#"+myobj.id).css("background-color","gray")
-         };         
-      function leave(myobj){
-    $("#"+myobj.id).css("background-color","white")
-      }
-     function big(myobj){
-      $("#"+myobj.id).css("font-size","1.50rem")
-    }
-    function small(myobj){
-     $("#"+myobj.id).css("font-size","1.15rem")
+   var test;
+   function OnInput (event){
+      test=event.target.value
     }
   </script>
   </head>
@@ -36,7 +28,7 @@
        <ul class="right hide-on-med-and-down" id="searchitem">
        <li style="position:relative !important;"><form>
         <div class="input-field">
-          <input id="search" type="search" placeholder="輸入「課程名」或「教師名」" >
+          <input id="search" type="search" placeholder="輸入「課程名」或「教師名」"  oninput="OnInput (event)"/>
           <label class="label-icon" for="search"><i class="material-icons">search</i></label>
         </div>
       </form></li>

@@ -1,9 +1,18 @@
 var name=""
 var mail=""
 var department=""
-var grade="" 
+var grade=""
+var data;
 $(document).ready(function() {
-  var depatment=new Vue({
+   $.ajax({                //get the course information  
+     url:"./hi",
+     method:"GET",
+     success:function(result){
+     data=result
+    },
+   });
+   console.log(data);
+    var depatment=new Vue({
          el:'#department',
          data:{
            	message:' '
@@ -105,7 +114,7 @@ $(document).ready(function() {
    }
   }
  })
-   $('#submit').click(function()
+   $('#submit').click(function()  //change the profile
 {
    name=$('#first_name1').val();
    mail=$('#first_name2').val();
@@ -120,17 +129,17 @@ $(document).ready(function() {
    $('#mask').hide(); 
 })
 $('#link').click(function()
-  { 
+{ 
       $('#mask').show();
       $('#box').show();
-  })
+})
  $('#back').click(function()
 {
    $('#box').hide();
    $('#mask').hide();
   })
 })
- $(document).mouseup(function(e){
+$(document).mouseup(function(e){   //edit the profile
   var _con = $('#box');   
   if(!_con.is(e.target) && _con.has(e.target).length === 0){ 
    $('#box').hide();
