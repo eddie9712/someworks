@@ -5,6 +5,16 @@ var grade=""
 var data;
 var test;
 $(document).ready(function() {
+   $('#content').hide();
+    $('#small_card').hide();
+    $('#pic').click(function()
+  {
+     $('#small_card').show();
+    })
+  $('#go').click(function()
+  {
+     $('#content').show();
+    })
     var list=
     [
       {

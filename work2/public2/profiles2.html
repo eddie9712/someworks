@@ -28,10 +28,10 @@
         j=0;
        input=event.target.value
        var get=new RegExp(input)
-         var array = new Array(); 
+         var array = new Array(); //for courses name
        for(i=0;i<5112;i++)
         {
-           if(get.test(data[i]["課程名稱"])&&input!='')  //get the courses matched 
+           if((get.test(data[i]["課程名稱"])||get.test(data[i]["老師"]))&&(input!=''))  //get the courses matched 
          {
            array[j]=data[i];
             j++; 
@@ -44,7 +44,7 @@
      }
    </script>
    </head>
- <body tyle="font-family:Microsoft JhengHei">
+ <body tyle="font-family:Microsoft JhengHei" >
   <div> 
    <ul id="test" class="collection" style="z-index:2; position:absolute; top:7vh; left:15.5vw; width:60vw;">
        <li class="collection-item" >
@@ -56,7 +56,7 @@
      </li>
     </ul>
    </div>
-    <nav>
+    <nav style="height:6vh">
    <div class="nav-wrapper" style="background-color:0fa5d1">
       <img src="./assets/hub.png" style="height:100%; width:auto"></img>
        <ul class="right hide-on-med-and-down" id="searchitem">
@@ -70,11 +70,24 @@
        <li><a href="#">排班表</a></li>
        <li><i class="material-icons">favorite</i></li> 
        <li><div class="chip">number</div></li>
-        <li style="padding-top:10px" id="pic"><img src="./assets/picture.png" alt="" class="circle" style="height:50px; width:50px; "></li>
+        <li style="padding-top:10px" id="pic"><img src="./assets/picture.png" alt="" class="circle" style="height:50px; width:50px; cursor:pointer"></li>
      </ul>
    </div>
  </nav>
-    <div class="row" style="padding:5vw">
+   <div class="card horizontal" style="position:absolute; z-index:2; right:7vw; top:6vh; margin:0px; width:15vw;" id="small_card">
+       <div style="padding:25px; padding-right:0px">
+        <img src="./assets/picture.png" style="border-radius:50%; width:90px; height:90px">
+       </div>
+        <div class="card-stacked">
+        <div class="card-content">
+          <h5><strong><b>汪宗諺</b></strong></h3>
+          <h6 style="color:gray">工程科學系</h6>
+          <h6 style="color:gray">三年級</h6>
+          <a style="cursor:pointer" id="go">前往個人頁</a>
+        </div>
+      </div>
+    </div>
+   <div class="row" style="padding:5vw" id="content">
       <div class="col s7 push-s5">
         <div class="container" style="width:90%">
        <h6>已提供心得(13)<h6>

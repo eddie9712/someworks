@@ -1,8 +1,17 @@
-<HTML><HEAD><TITLE>parentheses checking using a stack</TITLE>
+    <HTML><HEAD><TITLE>coding assignment 2: heap sort vs. quick sort</TITLE>
 <META http-equiv=Content-Type content="text/html; charset=big5">
-<base target="content" href="http://ilin.iim.ncku.edu.tw/ilin/course/DS1801/">
-<link href="http://ilin.iim.ncku.edu.tw/ilin/ilin1.css" rel="stylesheet" type="text/css"></HEAD>
-<BODY bgcolor="#D9D9F3" background="http://ilin.iim.ncku.edu.tw/ilin/gif/blbk1.gif">
+<base target="content" href="https://dl.dropbox.com/u/11385565/www/course/DS1401/">
+<link href="../../webfiles/ilin1.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.style1 {
+	color: #0000FF;
+	font-weight: bold;
+}
+-->
+</style>
+</HEAD>
+<BODY bgcolor="#D9D9F3" background="../../webfiles/blbk1.gif">
 <DIV align=left>
 <TABLE width=560 align=center border=0>
   <TBODY>
@@ -16,9 +25,8 @@
             <TABLE width=166 align=center border=1>
               <TBODY>
               <TR vAlign=center align=middle bgColor=#ffc0cb>
-                        <TH vAlign=center noWrap align=middle><p><FONT size=+1>2nd 
-                            coding assigment</FONT><br>
-                            <font color="#FF0000">Due 2018/11/12 17:00</font></p>
+                        <TH vAlign=center noWrap align=middle><p><FONT size=+1>3rd assigment</FONT><br>
+                            <font color="#FF0000">Due 12/17 17:00</font></p>
                         </TH>
                       </TR></TBODY></TABLE></TD>
           <TD width=100>
@@ -32,99 +40,109 @@
       <TABLE width="100%" border=0 align="center">
             <TBODY>
               <TR> 
-                <TD  rowSpan=8 vAlign=top><p>You are asked to write a program 
+                <TD  rowSpan=9 vAlign=top><p>You are asked to write a program 
                     which can</p>
                   <ul>
-                    <li> read a string which is composed of ．(．, ．)・, ．[．, ．]・, 
-                      ．{．, ．}・ (any other characters will be ignored)</li>
-                    <li> check the brackets are symmetrical (i.e. matched) using 
-                      a stack </li>
-                    <li>printout the result: either printout &quot;<font color="#FF0000"><strong>OK! 
-                      The string XXXX passed the check!!</strong></font>&quot;, 
-                      or &quot;<font color="#FF0000"><strong>Error!! You should 
-                      add Y right after XX !!</strong></font>&quot;, or &quot;<font color="#FF0000"><strong>Error!! 
-                      You should add Y right before XX !!</strong></font>&quot;, 
-                      depending on the situation of the 1st error from the left to the right, where <font color="#FF0000"><strong>XXXX</strong></font> 
-                      represents the original string you just input, <font color="#FF0000"><strong>Y</strong></font> 
-                      represents the suitable symbol (i.e., ), ], or }) that the 
-                      string <font color="#FF0000"><strong>XX</strong></font> 
-                      is firstly mismatched, and XX represents the part of the 
-                      string that passes the check. </li>
+                    <li>read a natual number <font color="#0000FF"><strong>n</strong></font>, 
+                      a lower bound <font color="#0000FF"><strong>a_min</strong></font>, 
+                      an upper bound <font color="#0000FF"><strong>a_max</strong><font color="#000000">, 
+                      and up</font></font></li>
+                    <li>pirntout a sequence of <strong><font color="#0000FF">n</font></strong> 
+                      random integer numbers (i.e. A[0], A[1],..., A[n-1]) uniformly 
+                      distributed in the range<font color="#0000FF"><strong> [a_min, 
+                      a_max]</strong></font></li>
+                    <li>write a function <font color="#003300"><strong>duplicate_array(A,B,m,n)</strong></font> 
+                      to copy the entire mxn array A to another mxn array B. (e.g. 
+                      here in this assignment we assume an one-dimensional 1xn 
+                      array, thus m=1. This function will be used again for some 
+                      future assignments, so I suggest you to implement an mxn 
+                      version rather than a 1xn version.</li>
+                    <li>write a function <strong><font color="#003300">printout_arrary(A,m,n)</font></strong> 
+                      to printout the entire mxn array A (m=1 in this assignment. 
+                      however, this function will be used again for some future 
+                      assignments, so I suggest you to implement an mxn version 
+                      rather than a 1xn version.)</li>
                   </ul>
-                  <p>Example: suppose your code is named <em>chkstrg</em>, and 
-                    is compiled to be an executable file named <em>chkstrg1</em>. 
-                    After keyin <em>chkstrg1</em> and press enter, you should 
-                    see:</p>
+                  <p class="style1">= all the above are the same as the 2nd coding assignment (i.e. homework 3) =</p>
+                  <ul>
+                    <li>write a function <font color="#003300"><strong>heap_sort(A,n)</strong></font> 
+                      which sorts these n integers by heap sort </li>
+                    <li>printout the sorted array A by printout_array(A,1,n). (<font color="#FF0000">!Note!, DO NOT invoke printout_array(A,1,n) inside function heap_sort(A,n). You HAVE TO invoke printout_array(A,1,n) in the main function</font>)</li>
+                    <li>write a function <font color="#003300"><strong>quick_sort(B,1,n)</strong></font> 
+                    which sorts these n integers by quick sort </li>
+                    <li>sort these n integers by the quick sort, printout the sorted 
+                    sequence</li>
+                  </ul>                  
+                  <p>Screen Input: <font color="#0000FF"><strong>n, <font color="#0000FF"><strong>a_min</strong></font>, 
+                    <font color="#0000FF"><strong>a_max</strong></font></strong></font><br>
+                    Screen Output: </p>
                   <blockquote> 
-                    <p><strong><font color="#FF0000">Please input a string: </font></strong>(then 
-                      you input, say, <font color="#0000FF"><strong>[2*(5a)+4{x[y%($#)]ss}33]</strong></font>, 
-                      press enter)</p>
+                    <p>first output the sorted sequence by heap sort in one 
+                      line, then output the sorted sequence by quick sort in one 
+                      line</p>
                   </blockquote>
-                  <p>then the program should printout:</p>
+                  <p>example: suppose your code is named as <em>sort1</em>, then 
+                    when you execute <em>sort1</em>, you should see:</p>
                   <blockquote> 
-                    <p><font color="#FF0000"><strong>OK! The string <font color="#0000FF">[2*(5a)+4{x[y%($#)]ss}33]</font> 
-                      passed the check!!</strong></font></p>
+                    <p><strong><font color="#FF0000">Please input [n, a_min, a_max]: 
+                      </font></strong>(then you input, say, 5 10 100, press enter)</p>
                   </blockquote>
-                  <p>On the other hand, if one inputs <font color="#0000FF"><strong>[2*(5a)+4{x[y%($#)}ss}33]</strong></font>, 
-                    or <font color="#0000FF"><strong>]234{})</strong></font>, 
-                    or <font color="#0000FF"><strong>123}4@#$[</strong></font> 
-                    , then the program should printout:</p>
+                  <p>then you should see 5 numbers generated on the screen, say,</p>
                   <blockquote> 
-                    <p><font color="#FF0000"><strong>Error!! You should add <font color="#0000FF">]</font> 
-                      right after </strong></font><font color="#0000FF"><strong>[2*(5a)+4{x[y%($#)</strong></font><font color="#FF0000"><strong> 
-                      !!<br>
-                      Error!! You should add <font color="#0000FF">[</font> right 
-                      before </strong></font><font color="#0000FF"><strong>]</strong></font><font color="#FF0000"><strong> 
-                      !!<br>
-                      Error!! You should add <font color="#0000FF">{</font> right 
-                      after </strong></font><font color="#0000FF"><strong>123</strong></font><font color="#FF0000"><strong> 
-                      !!</strong></font> </p>
+                    <p><strong><font color="#FF0000">11 22 55 18 53</font></strong></p>
                   </blockquote>
-                  <p>, respectively.</p>
-                  <p>There may exist other error situations not included in the 
-                    above examples. Anyway, you are responsible to print out the 1st error if there is any.</p>
-                  <hr> <p><strong><font color="#330099">!!Special notice!!</font></strong>:</p>
+                  <p>then you should see the sorted results which look like</p>
+                  <blockquote> 
+                    <p><strong><font color="#FF0000">By heap sort:<br>
+                      11 18 22 53 55<br>
+                      By quick sort:<br>
+                      11 18 22 53 55</font></strong></p>
+                  </blockquote>
+                  <hr> <p>About random number generator:</p>
                   <ol>
-                    <li>This assignment should not be so difficult. However, you 
-                      will need to know how to manipulate string/character processing. 
-                      You <font color="#FF0000"><strong>HAVE TO</strong></font> 
-                      clearly indicate how you use a &quot;stack&quot; to do the 
-                      checking.</li>
-                    <li>All the characters other than ．(．, ．)・, ．[．, ．]・, ．{．, ．}・ 
-                      should be ignored. </li>
-                    <li>To make your life better, this time I ALLOW you to create 
-                      a FIXED-SIZED array (say, an arry capable of storing at 
-                      least 100 characters) to implement the stack, if you want. 
-                      If you implement the stack using <u>dynamically memory allocation 
-                      and linked list</u>, you may get <font color="#FF0000"><strong>extra 
-                      credits</strong></font> (up to 10 or more points!). In that 
-                      case, you should point out in the comment part of your codes 
-                      so that the TAs may give the extra credits more easily. 
+                    <li>You may use whatever random number generator function 
+                      you like (some are built-in functions by the language already). 
+                      Whatever you use, you must make sure it compile/run in unix 
+                      environment.</li>
+                    <li>Note that most of the random number function only produce 
+                      a real random number between 0 and 1, so you have to try 
+                      to convert the number to be in the range [a_min, a_max] 
+                      by yourself</li>
+                    <li>For those who use C, <a href="https://www.dropbox.com/s/z9ljno86x626xe5/mt19937.c?dl=0">mt110147.c</a> 
+                      contains several functions which gives random <font color="#FF0000">real</font> 
+                      numbers between 0 and 1. For those who use C++, <a href="https://www.dropbox.com/s/thlhii9h7gsdmga/rn.cpp?dl=0">rn.cpp</a> 
+                      also produces random <font color="#FF0000">real</font> numbers 
+                      between 0 and 1. You may copy them with some modification 
+                      by yourself to produce random <font color="#FF0000">integer</font> 
+                      numbers between the given range [a_min, a_max].</li>
+                    <li>Note that random number generator usually requires a random 
+                      seed to produce random numbers. Same random seed will give 
+                      you same sequences of random numbers. So, if you want to 
+                      produce different random number everytime you call the function, 
+                      you may also need to specify a random number as an input, 
+                      say, ask the user to input <font color="#FF0000"><strong>[n, 
+                      a_min, a_max, random_seed].</strong></font> (it's not required 
+                      for this assignment, but may be required for future assignment.) 
                     </li>
-                    <li>You have to submit your code electronically to our moodle 
-                      website in time (i.e. <font color="#FF0000"><strong>2018/11/12 
-                      17:00</strong></font>). Again, please do not submit the 
-                      compiled binary file. You only need to submit the source 
-                      code, following the instruction as specified <a href="code_hw_stack#e_turnin">below 
-                      (see About turn-in the code electronically)</a>.</li>
-                    <li> <strong>You also HAVE TO submit a <u>paper version</u> 
-                      of your code, including your code, as well as two sample 
-                      inputs/outputs by <font color="#FF0000"><strong>2018/11/12 17:15</strong></font>. Late turn-in will NOT be accepted 
-                      except for very special reason. So, please remember to get 
-                      up early.</strong></li>
                   </ol>
                   <p> 
-                  <hr> <a name="e_turnin"></a>About turn-in the code electronically:</p> 
+                  <hr>
+                    About turn-in the code electronically:</p>
                   <ol>
-                    <li>you have to create a directory named <font color="#0000FF"><strong>h3890123_hw2</strong></font> 
-                      (where you should replace h3890123 to be your student id), 
+                    <li>you have to create a directory named <font color="#0000FF"><strong>r3890123_hw3</strong></font> 
+                      (where you should replace r3890123 to be your student id), 
                       then put your code(s) into that directory, then go up one 
                       level, zip the whole directory by<br>
-                      <font color="#0000FF"><strong>zip -r h3890123_hw2.zip h3890123_hw2</strong></font><br>
-                    then upload that zip file to our class website.</li>
-                    <li>Note that any late turn-in after <font color="#FF0000"><strong>2018/11/12 17:00</strong> </font>will not be allowed, except for very 
-                      special reasons.</li>
-                  </ol></TD>
+                      <font color="#0000FF"><strong>zip -r r3890123_hw3.zip r3890123_hw3</strong></font><br>
+                      then upload that zip file to our class website.</li>
+                    <li>Note that any late turn-in after <font color="#FF0000">12/17 
+                      17:00</font>will not be allowed. If you turn it in late 
+                      for few hrs before <font color="#FF0000">12/17 17:00</font>, 
+                      you will only get <font color="#FF0000">discount on </font> your 
+                      grades.  So, please turn-in as early 
+                      as possible. Thanks.</li>
+                  </ol>
+                  <p>&nbsp;</p></TD>
               </TR>
               <TR></TR>
               <TR></TR>
@@ -133,9 +151,7 @@
               <TR></TR>
               <TR></TR>
               <TR></TR>
-              <TR>
-                <TD vAlign=top>&nbsp;</TD>
-              </TR>
+              <TR></TR>
             </TBODY>
           </TABLE>
       <HR>
