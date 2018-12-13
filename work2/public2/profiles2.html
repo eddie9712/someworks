@@ -36,23 +36,29 @@
            array[j]=data[i];
             j++; 
           }
-         }
+          }
+        console.log(array);
         for(i=0;i<array.length;i++)
        {
-         $('#test').append("<li class='collection-item' ><span class='secondary-content' style='padding-right:320px'>"+array[i]["課程名稱"]+"</span></li>")   
+         //$('#test').append("<li class='collection-item' ><span class='secondary-content' style='padding-right:320px'>"+array[i]["課程名稱"]+"</span></li>")   
         }
      }
    </script>
    </head>
  <body tyle="font-family:Microsoft JhengHei" >
-  <div> 
-   <ul id="test" class="collection" style="z-index:2; position:absolute; top:7vh; left:15.5vw; width:60vw;">
-       <li class="collection-item" >
-          <span class="secondary-content" style="padding-right:320px">{{array["課程名稱"]}</span>
-  	  <span class="secondary-content" style="padding-right:240px">2018</span>
-          <span class="secondary-content" style="padding-right:160px">2018</span>
-  	  <span class="secondary-content" style="padding-right:120px">2018</span> 
-          <span class="secondary-content" style="padding-right:80px">2018</span>
+  <div style=" position:absolute; top:5.2vh; left:16.8vw; width:60vw; z-index:3; height:70vh;" id="search_output">
+     <ul class="collection oo1" style="width:100%; margin:0;" v-for="(list,index) in items">
+      <li class="collection-item avatar row11" style="padding-top:30px; padding-left:80px; cursor:pointer" id="row11">
+        <i class=" circle red" style="width:50px; height:50px;">{{list.type}}</i>
+        <div>
+        <div class="title" style="font-size:20px; padding-left:20px">{{list.name}}</div>
+        <div class="title" style="font-size:85%; padding-left:20px; color:gray">{{list.teacher}}</div>
+        </div>
+        <i class="small secondary-content" style="padding-right:380px; padding-top:20px; "><img src="./assets/icon_completed.png"></i>
+         <span class="secondary-content" style="padding-right:290px; padding-top:15px">2018.11.02</span>
+         <div style="width:2px; height:8vh; background-color:rgba(230,230,230,1); margin-right:250px" class="secondary-content"></div> 
+         <i class="secondary-content gray" style="padding-right:230px; cursor:pointer"><img src="./assets/icon_edit.png"></i>
+         <i class="o1 secondary-content" style="cursor:pointer; padding-right:170px" @click="deleteitem(index)" ><img src="./assets/icon_delete.png"></i>
      </li>
     </ul>
    </div>
@@ -92,7 +98,7 @@
         <div class="container" style="width:90%">
        <h6>已提供心得(13)<h6>
       <div id="frame1">  <!--frame-->
-  <ul class="collection oo1" style="width:950px; margin:0;" v-for="(list,index) in items">
+     <ul class="collection oo1" style="width:950px; margin:0;" v-for="(list,index) in items">
       <li class="collection-item avatar row11" style="padding-top:30px; padding-left:80px; cursor:pointer" id="row11">
         <i class=" circle red" style="width:50px; height:50px;">{{list.type}}</i>
         <div>
