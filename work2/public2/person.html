@@ -117,24 +117,18 @@
   <script src="./js/materialize.js"></script>
   <script src="./js/init.js"></script>
   <script>
+   var words;
    var isChange = false;
-   $(function () {
-        $("textarea").change(function () {
-            isChange = true;
-            $(this).addClass("editing");
-        });
-
-        $(window).bind('beforeunload', function (e) {
-            if (isChange || $(".editing").get().length > 0) 
-           {
-             $.ajax({                //get the courses information  
-     	     url:'./hi',
+   $(window).on('beforeunload', function (e) {
+             words=$('textarea').val()
+            if(words!='')
+            {   
+             $.ajax({                  
+     	     url:'./123',
      	     method:"GET",
-             data:'hi',
+             data:{info:words}
               });
-          
             }
-        })
     });
    var data;
    var data1;
@@ -149,7 +143,7 @@
      	url:'https://nckuhub.com/test/course/allCoursePrev',
      	method:"GET",
      	success:function(result){
-        data=result;
+        data1=result;
 	},
        });
       function OnInput (event){     //detect the input 
@@ -177,8 +171,6 @@
           $('#coursename').append("<li style='cursor:pointer;  background-color:rgba(255,255,255,1)'  class='list'>"+array[i]['課程名稱']+"   -"+array[i]['老師']+"</li>")   
        }
      }
-  </script>
-  <script>
   var setScale = new Vue({
       el: ".provCourse",
       data:{
