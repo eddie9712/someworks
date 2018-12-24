@@ -170,8 +170,8 @@
           for(i=0;i<array.length;i++)
         {
              k=i;
-             compare=array[i]["課程名稱"];
-             while(k<array.length-1)
+             campare=array[i]["課程名稱"];
+              while(k<array.length)
            {
               k++;
               if(compare==array[k]["課程名稱"])
@@ -181,7 +181,7 @@
         for(i=0;i<array.length;i++)
        {
           if(array[i]["課程名稱"]!='0')
-         $('#coursename').append("<li style='cursor:pointer;  background-color:rgba(255,255,255,1); z-index:3'; class='list'>"+array[i]['課程名稱']+"</li>")   
+          $('#coursename').append("<li style='cursor:pointer;  background-color:rgba(255,255,255,1)'  class='list'>"+array[i]['課程名稱']+"   -"+array[i]['老師']+"</li>")   
        }
      }
   var setScale = new Vue({
