@@ -16,10 +16,11 @@
    <script type="text/javascript" src="./js/profiles.js"></script>
    <script>
       $.ajax({                //get the courses information  
-     	url:"./hi",
-     	method:"GET",
+       url:'https://nckuhub.com/test/course', 
+        method:"GET",
      	success:function(result){
-     	data=result
+        data=result
+      console.log(data);
 	},
        });
       function OnInput (event){

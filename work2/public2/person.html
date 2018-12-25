@@ -119,7 +119,14 @@
   <script>
    var words;
    var isChange = false;
-   $(window).on('beforeunload', function (e) {
+    var data;
+    var data1;
+   function returnobject(obj){
+      console.log(obj);
+
+
+   }
+   $(window).on('beforeunload', function (e){  //send the input to the server
              words=$('textarea').val()
             if(words!='')
             {   
@@ -130,8 +137,6 @@
               });
             }
     });
-   var data;
-   var data1;
    $.ajax({                //get the courses information  
      	url:'https://nckuhub.com/test/course',
      	method:"GET",
@@ -140,10 +145,11 @@
 	},
        });
     $.ajax({                //get the courses semester  
-     	url:'https://nckuhub.com/test/course/allCoursePrev',
+     	url:'https://nckuhub.com/course/allCoursePrev',
      	method:"GET",
      	success:function(result){
         data1=result;
+        console.log(data1);
 	},
        });
       function OnInput (event){     //detect the input 
@@ -181,7 +187,7 @@
         for(i=0;i<array.length;i++)
        {
           if(array[i]["課程名稱"]!='0')
-         $('#coursename').append("<li style='cursor:pointer;  background-color:rgba(255,255,255,1); z-index:3'; class='list'>"+array[i]['課程名稱']+"</li>")   
+         $('#coursename').append("<li style='cursor:pointer; id='"+array[i]['id']+"' background-color:rgba(255,255,255,1); z-index:3' class='list' onclick='returnobject(this)'>"+array[i]['課程名稱']+"</li>")   
        }
      }
   var setScale = new Vue({
