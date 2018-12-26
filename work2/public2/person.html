@@ -51,19 +51,16 @@
           </div>
           <div class="row">
             <div class="input-field col s4">
-              <select style="height:1.3rem">
-                <option value="" disabled selected>105-2</option>
-                <option value="1">105-1</option>
-                <option value="2">104-2</option>
-                <option value="3">104-1</option>
+              <select id="sem" style="height:1.3rem">
+                <option>104-1</option>
               </select>
               <label></label>
             </div>
             <div class="input-field col s8">
               <select style="height:1.3rem">
                 <option value="" disabled selected>蕭仁傑</option>
-                <option value="1">貓貓</option>
-                <option value="2">貓貓</option>
+                <option>貓貓</option>
+                <option>貓貓</option>
               </select>
               <label></label>
             </div>
@@ -110,7 +107,6 @@
   <div id="index-banner" class="parallax-container">
 
   </div>
-
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
@@ -122,10 +118,18 @@
     var data;
     var data1;
    function returnobject(obj){
-      console.log(obj);
-
-
-   }
+     var name;
+     var k;
+     name=$(obj).text();
+     $('.box').hide();
+     for(k=0;k<data1.length;k++)
+     {
+        if(data1[k]["課程名稱"]==name)
+       {
+         $('#sem').append("<option>"+data1[k]['semester']+"</option>")
+       }
+     } 
+    }
    $(window).on('beforeunload', function (e){  //send the input to the server
              words=$('textarea').val()
             if(words!='')
@@ -145,13 +149,14 @@
 	},
        });
     $.ajax({                //get the courses semester  
-     	url:'https://nckuhub.com/course/allCoursePrev',
+     	url:'https://nckuhub.com/test/course/allCoursePrev',
      	method:"GET",
      	success:function(result){
         data1=result;
         console.log(data1);
 	},
-       });
+    });
+
       function OnInput (event){     //detect the input 
        $('#coursename').html('');
        var input,i,j,k,compare
