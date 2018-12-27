@@ -42,7 +42,7 @@
       </nav>
       <div class="white provCourseBody modal-content" v-if="hasZoomOut==false">
           <div class="input-field col s12">
-            <input  type="text" id="autocomplete-input" class="autocomplete col s10 push-s2" style="height:1.5rem; margin-bottom:0;" oninput="OnInput (event)" placeholder="輸入課程名稱"/>
+            <input  type="text" id="getcourse" class="autocomplete col s10 push-s2" style="height:1.5rem; margin-bottom:0;" oninput="OnInput (event)" placeholder="輸入課程名稱"/>
             <label for="autocomplete-input"></label>
           </div>
           <div class="box"style="display:none; overflow:scroll; position:absolute; z-index:2; width:30vw; height:30vh;  top:9vh; " >
@@ -52,7 +52,6 @@
           <div class="row">
             <div class="input-field col s4">
               <select id="sem" style="height:1.3rem">
-                <option>104-1</option>
               </select>
               <label></label>
             </div>
@@ -103,9 +102,7 @@
         <a href="#!" class="modal-close waves-effect waves-green btn-small btn-flat right disabled" style="background-color:white ;margin-right:15px;margin-left:10px">放棄</a>
       </div>
     </div>
-
   <div id="index-banner" class="parallax-container">
-
   </div>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -120,13 +117,15 @@
    function returnobject(obj){
      var name;
      var k;
-     name=$(obj).text();
+    name=$(obj).text();
+    $('#getcourse').val(name)
      $('.box').hide();
      for(k=0;k<data1.length;k++)
      {
         if(data1[k]["課程名稱"]==name)
        {
          $('#sem').append("<option>"+data1[k]['semester']+"</option>")
+         $('select').formSelect();  
        }
      } 
     }
@@ -156,7 +155,6 @@
         console.log(data1);
 	},
     });
-
       function OnInput (event){     //detect the input 
        $('#coursename').html('');
        var input,i,j,k,compare
